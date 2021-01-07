@@ -91,7 +91,9 @@ public class StringExer {
     //4.获取两个字符串中最大相同子串。比如：
     //str1 = "abcwerthelloyuiodef“;str2 = "cvhellobnm"//10
     //提示：将短的那个串进行长度依次递减的子串与较长的串比较。
+    public void test4(){
 
+    }
 
 
     //5.对字符串中字符进行自然顺序排序。"abcwerthelloyuiodef"
