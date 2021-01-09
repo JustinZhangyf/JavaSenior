@@ -1,5 +1,7 @@
 package com.atguigu.exer;
 
+import org.junit.Test;
+
 /**
  * @author Justin.Zhang
  * @Description
@@ -11,13 +13,57 @@ package com.atguigu.exer;
  */
 public class StringDemo1 {
     /**
-     *
      * @param mainStr
      * @param subStr
      * @return
      */
-    public int getStrCount(String mainStr, String subStr){
-        return 0;
+
+
+    //方法1
+    public int getStrCount(String mainStr, String subStr) {
+
+        int mainLength = mainStr.length();
+        int subLength = subStr.length();
+
+        int count = 0;
+        int index;
+        if (mainLength > subLength) {
+            while ((index = (mainStr.indexOf(subStr))) != -1) {
+                count++;
+                mainStr = mainStr.substring(index + subLength);
+            }
+
+        }
+        return count;
     }
+    //方法2
+    public int getStrCount2(String mainStr, String subStr) {
+
+        int mainLength = mainStr.length();
+        int subLength = subStr.length();
+
+        int count = 0;
+        int index = 0;
+        if (mainLength > subLength) {
+            while ((index = mainStr.indexOf(subStr, index)) != -1) {
+                count++;
+                index += subLength;
+            }
+
+        }
+        return count;
+
+    }
+
+
+    @Test
+    public void countTest() {
+        String mainStr = "cdabkkcadkabkebfkabkskab";
+        String subStr = "ab";
+
+        int strCount = getStrCount2(mainStr, subStr);
+        System.out.println(strCount);
+    }
+
 
 }
