@@ -80,14 +80,14 @@ public class StringTest {
         System.out.println(s3 == s4);//false
 
         System.out.println("***********************");
-//        Person p1 = new Person("Tom",12);
-//        Person p2 = new Person("Tom",12);
-//
-//        System.out.println(p1.name.equals(p2.name));//true
-//        System.out.println(p1.name == p2.name);//true
-//
-//        p1.name = "Jerry";
-//        System.out.println(p2.name);//Tom
+        Person p1 = new Person("Tom",12);
+        Person p2 = new Person("Tom",12);
+
+        System.out.println(p1.name.equals(p2.name));//true
+        System.out.println(p1.name == p2.name);//true
+
+        p1.name = "Jerry";
+        System.out.println(p2.name);//Tom
     }
 
 
