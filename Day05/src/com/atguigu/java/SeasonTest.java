@@ -9,6 +9,23 @@ public class SeasonTest {
     public static void main(String[] args) {
         Season autumn = Season.AUTUMN;
         System.out.println(autumn);
+
+        System.out.println("*************");
+        Season1[] values = Season1.values();
+        for (int i = 0; i < values.length; i++) {
+            System.out.println(values[i]);
+        }
+
+        Thread.State[] values1 = Thread.State.values();
+        for (int i = 0; i < values1.length; i++) {
+            System.out.println(values1[i]);
+        }
+        System.out.println("******************");
+
+        //valueOf(String objName) 返回枚举类中对象名是objName的对象
+        //如果没有objName的枚举类对象，则抛异常：IllegalArgumentException
+        Season1 autumn1 = Season1.valueOf("AUTUMN");
+        System.out.println(autumn1);
     }
 }
 
