@@ -14,6 +14,7 @@ public class SeasonTest {
         Season1[] values = Season1.values();
         for (int i = 0; i < values.length; i++) {
             System.out.println(values[i]);
+            values[i].show();
         }
 
         Thread.State[] values1 = Thread.State.values();

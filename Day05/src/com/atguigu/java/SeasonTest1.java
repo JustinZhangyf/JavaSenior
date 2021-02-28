@@ -10,18 +10,43 @@ public class SeasonTest1 {
         System.out.println(summer);
 
         System.out.println(Season1.class.getSuperclass());
+        summer.show();
     }
+}
+
+interface Info{
+    void show();
 }
 
 
 //使用enum关键字定义枚举类
-enum Season1{
+enum Season1 implements Info{
 
     //1.提供当前枚举类的多个对象，多个对象之间用,隔开 末尾的对象;结束
-    SPRING ("春天","春暖花开"),
-    SUMMER ("夏天","夏日炎炎"),
-    AUTUMN ("秋天","秋高气爽"),
-    WINTER ("冬天","冰天雪地");
+    SPRING ("春天","春暖花开"){
+        @Override
+        public void show() {
+            System.out.println("春天在哪里");
+        }
+    },
+    SUMMER ("夏天","夏日炎炎"){
+        @Override
+        public void show() {
+            System.out.println("宁夏");
+        }
+    },
+    AUTUMN ("秋天","秋高气爽"){
+        @Override
+        public void show() {
+            System.out.println("秋天不回来");
+        }
+    },
+    WINTER ("冬天","冰天雪地"){
+        @Override
+        public void show() {
+            System.out.println("大约在冬季");
+        }
+    };
     //1.声明Season对象的属性，private final修饰
     private final String seasonName;
     private final String seasonDesc;
